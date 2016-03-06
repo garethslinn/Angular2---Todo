@@ -1,0 +1,10 @@
+<input #todotext (keyup)="doneTyping($event)">
+<button (click)="addTodo(todotext)">Add todo</button>
+
+<div *ngFor="#todo of todos">
+    {{ todo.text }}
+    <a (click)="removeTodo(todo)"> X</a>
+</div>
+
+
+
