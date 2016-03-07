@@ -22,9 +22,8 @@ System.register(['angular2/platform/browser', 'angular2/core'], function(exports
             }],
         execute: function() {
             TodoItem = (function () {
-                function TodoItem(text, completed) {
+                function TodoItem(text) {
                     this.text = text;
-                    this.completed = completed;
                 }
                 return TodoItem;
             }());
@@ -34,15 +33,15 @@ System.register(['angular2/platform/browser', 'angular2/core'], function(exports
                     this.todos = new Array();
                     this.todos.push(new TodoItem('Hello world'), false);
                 }
-                AppComponent.prototype.removeTodo = function (item) {
+                AppComponent.prototype.remove = function (item) {
                     this.todos.splice(this.todos.indexOf(item), 1);
                 };
-                AppComponent.prototype.doneTyping = function ($event) {
+                AppComponent.prototype.completed = function ($event) {
                     if ($event.which === 13) {
                         this.addTodo($event.target);
                     }
                 };
-                AppComponent.prototype.addTodo = function (input) {
+                AppComponent.prototype.add = function (input) {
                     this.todos.push(new TodoItem(input.value, false));
                     input.value = '';
                 };

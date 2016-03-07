@@ -1,9 +1,11 @@
-<input #todotext (keyup)="doneTyping($event)">
-<button (click)="addTodo(todotext)">Add todo</button>
+
+
+<input #todotext (keyup)="completed($event)">
+<button (click)="add(todotext)">Add todo</button>
 
 <div *ngFor="#todo of todos">
     {{ todo.text }}
-    <a (click)="removeTodo(todo)"> X</a>
+    <a (click)="remove(todo)"> X</a>
 </div>
 
 
