@@ -1,18 +1,20 @@
 <div class="navbar-form navbar-left">
+    <h1>{{ strTitle }}</h1>
     <div class="form-group">
         <input class="form-control" placeholder="todo item" #todotext (keyup)="completed($event)">
-        <button class="btn btn-success" (click)="add(todotext)">Add todo</button>
+
+        <button [disabled]="!todotext.value" class="btn btn-success"  (click)="add(todotext)">{{ strAdd }}</button>
+
     </div>
-        <div *ngFor="#todo of todos">
+    <div *ngFor="#todo of todos">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                {{ todo.text }}
+                <a class="close glyphicon glyphicon-remove-circle pull-right" (click)="remove(todo)">
 
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    {{ todo.text }}
-                    <a class="close glyphicon glyphicon-remove-circle pull-right" (click)="remove(todo)"></a>
-                </div>
+                </a>
             </div>
-
         </div>
-
+    </div>
 </div>
 
