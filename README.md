@@ -1,5 +1,11 @@
 # Angular2---Todo
 
-To install: npm install
+A simple todo app.
 
-To run: npm start
+  - To install: npm install
+  - To run: npm start
+
+
+
+
+

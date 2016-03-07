@@ -13,9 +13,9 @@ export class TodoItem {
 })
 
 class AppComponent {
-    todos: string[];
-    strTitle: string;
-    strAdd: string;
+    public todos: string[];
+    public strTitle: string;
+    public strAdd: string;
 
     constructor() {
         this.todos = new Array<TodoItem>();
