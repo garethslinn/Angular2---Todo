@@ -31,7 +31,6 @@ System.register(['angular2/platform/browser', 'angular2/core'], function(exports
             AppComponent = (function () {
                 function AppComponent() {
                     this.todos = new Array();
-                    this.todos.push(new TodoItem('Hello world'), false);
                     this.strTitle = "Todo list";
                     this.strAdd = "Add";
                 }

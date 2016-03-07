@@ -19,7 +19,6 @@ class AppComponent {
 
     constructor() {
         this.todos = new Array<TodoItem>();
-        this.todos.push(new TodoItem('Hello world'), false);
         this.strTitle = "Todo list";
         this.strAdd = "Add";
     }
